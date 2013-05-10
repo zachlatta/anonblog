@@ -1,13 +1,11 @@
-<% form_for([@post, @post.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :commenter %><br />
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <fieldset>
+    <%= f.label :commenter %>
     <%= f.text_field :commenter %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label :body %>
     <%= f.text_area :body %>
-  </div>
-  <div calss="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit :class => 'btn' %>
+    </div>
+  </fieldset>
 <% end %>
