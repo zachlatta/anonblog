@@ -6,11 +6,6 @@
 <% end %>
 
 <p>
-  <b>Name:</b>
-  <%= @post.name %>
-</p>
-
-<p>
   <b>Title:</b>
   <%= @post.title %>
 </p>
@@ -27,7 +22,7 @@
   <%= render @post.comments %>
 <% end %>
  
-<p class="lead">Add a comment:</p>
+<p class="lead">Leave a reply</p>
 <%= render "comments/form" %>
 
 <%= link_to 'Edit Post', edit_post_path(@post) %> |

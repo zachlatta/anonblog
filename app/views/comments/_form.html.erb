@@ -1,7 +1,5 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <fieldset>
-    <%= f.label :commenter %>
-    <%= f.text_field :commenter %>
     <%= f.label :body %>
     <%= f.text_area :body, :rows => '8' %>
     <div class="actions">
