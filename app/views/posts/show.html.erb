@@ -15,10 +15,10 @@
   <%= @post.content %>
 </p>
 
-<h2>Comments</h2>
+<p class="lead">Comments</p>
 <%= render @post.comments %>
 
-<h2>Add a comment:</h2>
+<p class="lead">Add a comment:</p>
 <%= render "comments/form" %>
 
 <%= link_to 'Edit Post', edit_post_path(@post) %> |
