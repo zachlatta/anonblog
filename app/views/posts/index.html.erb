@@ -1,5 +1,3 @@
-<h1>Listing posts</h1>
-
 <% if @posts.empty? %>
   <p>No posts yet! Why not <%= link_to 'create one', new_post_path %>?</p>
 <% else %>
@@ -29,7 +27,3 @@
     </tbody>
   </table>
 <% end %>
-
-<br />
-
-<%= link_to 'New Post', new_post_path, :class => 'btn' %>
