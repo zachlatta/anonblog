@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if !notice.nil? %>
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <%= notice %></p>
+</div>
+<% end %>
 
 <p>
   <b>Name:</b>
@@ -11,14 +16,18 @@
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>Content:</b><br />
   <%= @post.content %>
 </p>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
-
-<h2>Add a comment:</h2>
+<p class="lead">Comments</p>
+<% if @post.comments %>
+  <p>Looks like there aren't any comments yet. Why not make one?</p>
+<% else %>
+  <%= render @post.comments %>
+<% end %>
+ 
+<p class="lead">Add a comment:</p>
 <%= render "comments/form" %>
 
 <%= link_to 'Edit Post', edit_post_path(@post) %> |

@@ -6,9 +6,19 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #EEEEEE;">
-
-<%= yield %>
-
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-inner">
+        <a class="brand" href="/">Anonymous Blog</a>
+        <ul class="nav">
+          <li><%= link_to 'New Post', new_post_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
