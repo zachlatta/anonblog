@@ -11,10 +11,8 @@
   <%= @post.content %>
 </p>
 
-<p class="lead">Comments</p>
-<% if @post.comments.empty? %>
-  <p>Looks like there aren't any comments yet. Why not make one?</p>
-<% else %>
+<% if !@post.comments.empty? %>
+  <p class="lead">Comments</p>
   <%= render @post.comments %>
 <% end %>
  
